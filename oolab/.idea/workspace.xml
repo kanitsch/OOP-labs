@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74d7f2c2-952a-47e5-b1be-f49e49dd3269" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MoveValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/WorldMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/util/MapVisualizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/model/AnimalTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/MapDirection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/SimulationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/SimulationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,13 +74,26 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.AnimalTest.animalEquals.executor": "Run",
+    "Gradle.AnimalTest.animalHashCode.executor": "Run",
+    "Gradle.AnimalTest.animalMove.executor": "Run",
+    "Gradle.AnimalTest.animalOutOfMap.executor": "Run",
+    "Gradle.AnimalTest.animalToString.executor": "Run",
+    "Gradle.AnimalTest.animalTurn.executor": "Run",
+    "Gradle.AnimalTest.createAnimal.executor": "Run",
+    "Gradle.AnimalTest.executor": "Run",
+    "Gradle.AnimalTest.move.executor": "Run",
+    "Gradle.AnimalTest.orientTest.executor": "Run",
     "Gradle.MapDirectionTest.executor": "Run",
     "Gradle.OptionsParserTest.ciagPusty.executor": "Run",
     "Gradle.OptionsParserTest.emptyArgs.executor": "Run",
-    "Gradle.OptionsParserTest.executor": "Coverage",
+    "Gradle.OptionsParserTest.executor": "Run",
+    "Gradle.SimulationTest.animalPosition.executor": "Run",
     "Gradle.SimulationTest.dataInterpretationTest1.executor": "Run",
     "Gradle.SimulationTest.dataInterpretationTest2.executor": "Run",
+    "Gradle.SimulationTest.emptyString.executor": "Run",
     "Gradle.SimulationTest.executor": "Run",
+    "Gradle.SimulationTest.moreAnimals.executor": "Run",
     "Gradle.SimulationTest.testAnimalMovement.executor": "Run",
     "Gradle.SimulationTest.testAnimalStaysWithinBounds.executor": "Run",
     "Gradle.Tests in 'oolab.test'.executor": "Coverage",
@@ -95,24 +118,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="agh.ics.oop.model" />
       <recent name="agh.ics.oop" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.SimulationTest">
-    <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
-      <module name="oolab.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="agh.ics.oop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OptionsParserTest.emptyArgs" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AnimalTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -125,7 +136,55 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.OptionsParserTest.emptyArgs&quot;" />
+            <option value="&quot;agh.ics.oop.model.AnimalTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MapDirectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;agh.ics.oop.model.MapDirectionTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="OptionsParserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;agh.ics.oop.OptionsParserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -150,30 +209,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;agh.ics.oop.SimulationTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="SimulationTest.testAnimalStaysWithinBounds" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationTest.testAnimalStaysWithinBounds&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -209,19 +244,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.World" />
-      <item itemvalue="Gradle.OptionsParserTest.emptyArgs" />
+      <item itemvalue="Gradle.AnimalTest" />
+      <item itemvalue="Gradle.MapDirectionTest" />
+      <item itemvalue="Gradle.OptionsParserTest" />
       <item itemvalue="Gradle.SimulationTest" />
-      <item itemvalue="Gradle.SimulationTest.testAnimalStaysWithinBounds" />
       <item itemvalue="Gradle.Vector2dTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.SimulationTest" />
-        <item itemvalue="Application.World" />
-        <item itemvalue="Gradle.OptionsParserTest.emptyArgs" />
+        <item itemvalue="Gradle.OptionsParserTest" />
         <item itemvalue="Gradle.Vector2dTest" />
-        <item itemvalue="Gradle.SimulationTest.testAnimalStaysWithinBounds" />
+        <item itemvalue="Gradle.AnimalTest" />
+        <item itemvalue="Gradle.MapDirectionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +282,9 @@
       <workItem from="1730916940188" duration="3991000" />
       <workItem from="1730921142969" duration="51000" />
       <workItem from="1730969898828" duration="248000" />
-      <workItem from="1730971332589" duration="534000" />
+      <workItem from="1730971332589" duration="3089000" />
+      <workItem from="1731002337295" duration="623000" />
+      <workItem from="1731176890756" duration="12474000" />
     </task>
     <servers />
   </component>
@@ -259,6 +296,7 @@
     <SUITE FILE_PATH="coverage/oolab$Vector2dTest.ic" NAME="Vector2dTest Coverage Results" MODIFIED="1730920825151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/oolab$MapDirectionTest.ic" NAME="MapDirectionTest Coverage Results" MODIFIED="1730885158954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/oolab$OptionsParserTest.ic" NAME="OptionsParserTest Coverage Results" MODIFIED="1730917426328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/oolab$SimulationTest.ic" NAME="SimulationTest Coverage Results" MODIFIED="1730969985710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/oolab$AnimalTest.ic" NAME="AnimalTest Coverage Results" MODIFIED="1731194328423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/oolab$SimulationTest.ic" NAME="SimulationTest Coverage Results" MODIFIED="1731176947346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

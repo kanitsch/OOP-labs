@@ -42,4 +42,7 @@ public interface WorldMap extends MoveValidator {
      * @return animal or null if the position is not occupied.
      */
     Animal objectAt(Vector2d position);
+
+    @Override
+    boolean canMoveTo(Vector2d position);
 }
