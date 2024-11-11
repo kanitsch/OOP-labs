@@ -43,6 +43,6 @@ public interface WorldMap extends MoveValidator {
      */
     Animal objectAt(Vector2d position);
 
-    @Override
-    boolean canMoveTo(Vector2d position);
+//    @Override
+//    boolean canMoveTo(Vector2d position);
 }
