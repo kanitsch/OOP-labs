@@ -5,6 +5,7 @@ import agh.ics.oop.model.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
@@ -35,9 +36,14 @@ class SimulationTest {
         List<Vector2d> positions= List.of(new Vector2d(2,2),new Vector2d(3,4));
         List<MoveDirection> moveDirectionList= OptionsParser.dirs(args);
         RectangularMap map = new RectangularMap(5,5);
-        Simulation simulation=new Simulation(positions, moveDirectionList,map);
+        List<Animal> animals =new ArrayList<>();
+        for (Vector2d position : positions) {
+            animals.add(new Animal(position));
+            map.place(animals.getLast());
+        }
+        Simulation<Animal,Vector2d> simulation=new Simulation<>(animals, moveDirectionList,map);
 
-        List<Animal> animals= Arrays.asList(new Animal(new Vector2d(2,2)),new Animal(new Vector2d(3,4)));
+        List<Animal> animals1= Arrays.asList(new Animal(new Vector2d(2,2)),new Animal(new Vector2d(3,4)));
 
         assertNotNull(simulation.getAnimals());
         assertNotNull(simulation.getAnimals());
@@ -45,33 +51,43 @@ class SimulationTest {
         assertNotNull(simulation.getMoveDirectionList());
         assertInstanceOf(List.class, simulation.getMoveDirectionList());
 
-        assertEquals(animals,simulation.getAnimals());
+        assertEquals(animals1,simulation.getAnimals());
         assertEquals(moveDirectionList,simulation.getMoveDirectionList());
     }
 
 
     @Test
     public void animalPosition() {
-        RectangularMap map = new RectangularMap(5,5);
+        WorldMap<Animal,Vector2d> map = new RectangularMap(5,5);
         String[] testArgs = {"f", "b", "r", "l", "f", "f"};
         List<MoveDirection> directions = OptionsParser.dirs(testArgs);
         List<Vector2d> positions = List.of(new Vector2d(2, 2), new Vector2d(3, 4));
-        Simulation simulation = new Simulation(positions, directions,map);
+        List<Animal> animals =new ArrayList<>();
+        for (Vector2d position : positions) {
+            animals.add(new Animal(position));
+            map.place(animals.getLast());
+        }
+        Simulation<Animal,Vector2d> simulation=new Simulation<>(animals, directions,map);
 
         simulation.run();
 
-        List<Animal> animals = simulation.getAnimals();
-        assertTrue(animals.get(0).isAt(new Vector2d(2,3)));
-        assertTrue(animals.get(1).isAt(new Vector2d(3,3)));
+        List<Animal> animals1 = simulation.getAnimals();
+        assertTrue(animals1.get(0).isAt(new Vector2d(2,3)));
+        assertTrue(animals1.get(1).isAt(new Vector2d(3,3)));
     }
 
     @Test
     public void animalOrientation(){
         String[] args={"f", "b", "r","l", "f", "f", "r", "r", "f", "f", "f", "f", "f", "f", "f","f"};
-        RectangularMap map = new RectangularMap(5,5);
+        WorldMap<Animal,Vector2d> map = new RectangularMap(5,5);
         List<Vector2d> positions= List.of(new Vector2d(2,2),new Vector2d(3,4));
         List<MoveDirection> moveDirectionList= OptionsParser.dirs(args);
-        Simulation simulation=new Simulation(positions, moveDirectionList,map);
+        List<Animal> animals =new ArrayList<>();
+        for (Vector2d position : positions) {
+            animals.add(new Animal(position));
+            map.place(animals.getLast());
+        }
+        Simulation<Animal,Vector2d> simulation=new Simulation<>(animals, moveDirectionList,map);
         simulation.run();
 
 
@@ -86,7 +102,12 @@ class SimulationTest {
         String[] args={};
         List<Vector2d> positions= List.of(new Vector2d(2,2),new Vector2d(3,4));
         List<MoveDirection> moveDirectionList= OptionsParser.dirs(args);
-        Simulation simulation=new Simulation(positions, moveDirectionList,map);
+        List<Animal> animals =new ArrayList<>();
+        for (Vector2d position : positions) {
+            animals.add(new Animal(position));
+            map.place(animals.getLast());
+        }
+        Simulation<Animal,Vector2d> simulation=new Simulation<>(animals,moveDirectionList,map);
         simulation.run();
         Assertions.assertEquals(simulation.getAnimals().get(0).getOrient(), MapDirection.NORTH);
         Assertions.assertEquals(simulation.getAnimals().get(1).getOrient(),MapDirection.NORTH);
@@ -98,7 +119,12 @@ class SimulationTest {
         RectangularMap map = new RectangularMap(5,5);
         List<MoveDirection> directions = OptionsParser.dirs(testArgs);
         List<Vector2d> positions = List.of(new Vector2d(2, 2), new Vector2d(3, 4),new Vector2d(0,0));
-        Simulation simulation = new Simulation(positions, directions,map);
+        List<Animal> animals =new ArrayList<>();
+        for (Vector2d position : positions) {
+            animals.add(new Animal(position));
+            map.place(animals.getLast());
+        }
+        Simulation<Animal,Vector2d> simulation=new Simulation<>(animals, directions,map);
 
         simulation.run();
 
@@ -113,13 +139,18 @@ class SimulationTest {
         RectangularMap map = new RectangularMap(5,5);
         List<MoveDirection> directions = OptionsParser.dirs(testArgs);
         List<Vector2d> positions = List.of(new Vector2d(0, 0), new Vector2d(4, 4));
-        Simulation simulation = new Simulation(positions, directions,map);
+        List<Animal> animals =new ArrayList<>();
+        for (Vector2d position : positions) {
+            animals.add(new Animal(position));
+            map.place(animals.getLast());
+        }
+        Simulation<Animal,Vector2d> simulation=new Simulation<>(animals, directions,map);
 
         simulation.run();
 
-        List<Animal> animals = simulation.getAnimals();
-        assertTrue(animals.get(0).isAt(new Vector2d(0, 4)));
-        assertTrue(animals.get(1).isAt(new Vector2d(4, 4)));
+        List<Animal> animals1 = simulation.getAnimals();
+        assertTrue(animals1.get(0).isAt(new Vector2d(0, 4)));
+        assertTrue(animals1.get(1).isAt(new Vector2d(4, 4)));
     }
 
 

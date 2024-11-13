@@ -3,6 +3,7 @@ package agh.ics.oop;
 import agh.ics.oop.model.*;
 import agh.ics.oop.model.MapDirection;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class World {
@@ -46,11 +47,29 @@ public class World {
         System.out.println(pet.toString());
 
         System.out.println(pet.toString());
-        WorldMap map = new RectangularMap(5,5);
+        WorldMap<Animal,Vector2d> map = new RectangularMap(5,5);
         List<MoveDirection> directions1 = OptionsParser.dirs(args);
         List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
-        Simulation simulation = new Simulation(positions, directions1,map);
+        List<Animal> animals = new ArrayList<>();
+        for (Vector2d position : positions){
+            animals.add(new Animal(position));
+            map.place(animals.getLast());
+        }
+        Simulation<Animal,Vector2d> simulation=new Simulation<>(animals, directions1,map);
         simulation.run();
+
+
+        WorldMap<String, Integer> textMap = new TextMap();
+        textMap.place("Ala");
+        textMap.place("ma");
+        textMap.place("kota");
+
+        List<String> strings = List.of("Ala", "ma", "kota");
+
+        Simulation<String, Integer> textSimulation = new Simulation<>(strings, directions1,textMap);
+        textSimulation.run();
+
+        System.out.println(textSimulation.getAnimals());
     }
 
 }

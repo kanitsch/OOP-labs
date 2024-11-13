@@ -29,28 +29,28 @@ public class Animal {
         return location.equals(position);
     }
 
-    public void move(MoveDirection direction, MoveValidator validator){
-    orient = switch (direction){
-        case RIGHT -> orient.next();
-        case LEFT -> orient.previous();
-        case FORWARD, BACKWARD -> orient;
+    public void move(MoveDirection direction, MoveValidator<Vector2d> validator){
+        orient = switch (direction){
+            case RIGHT -> orient.next();
+            case LEFT -> orient.previous();
+            case FORWARD, BACKWARD -> orient;
         };
-    Vector2d newLocation = location;
-    newLocation = switch (direction){
-        case LEFT, RIGHT -> location;
-        case FORWARD -> switch (orient){
-            case NORTH -> location.add(new Vector2d(0,1));
-            case SOUTH -> location.add(new Vector2d(0,-1));
-            case WEST -> location.add(new Vector2d(-1,0));
-            case EAST -> location.add(new Vector2d(1,0));
+        Vector2d newLocation = location;
+        newLocation = switch (direction){
+            case LEFT, RIGHT -> location;
+            case FORWARD -> switch (orient){
+                case NORTH -> location.add(new Vector2d(0,1));
+                case SOUTH -> location.add(new Vector2d(0,-1));
+                case WEST -> location.add(new Vector2d(-1,0));
+                case EAST -> location.add(new Vector2d(1,0));
+            };
+            case BACKWARD -> switch (orient){ //nie sprawdza czy nie wychodzi poza zakres
+                case NORTH -> location.add(new Vector2d(0,-1));
+                case SOUTH -> location.add(new Vector2d(0,1));
+                case WEST -> location.add(new Vector2d(1,0));
+                case EAST -> location.add(new Vector2d(-1,0));
+            };
         };
-        case BACKWARD -> switch (orient){ //nie sprawdza czy nie wychodzi poza zakres
-            case NORTH -> location.add(new Vector2d(0,-1));
-            case SOUTH -> location.add(new Vector2d(0,1));
-            case WEST -> location.add(new Vector2d(1,0));
-            case EAST -> location.add(new Vector2d(-1,0));
-        };
-    };
 //    if (newLocation.getX() >= 0 && newLocation.getX() <= 4 && newLocation.getY() >= 0 && newLocation.getY() <= 4)
 //            location = newLocation;
         if (validator.canMoveTo(newLocation)){
