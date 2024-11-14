@@ -59,7 +59,7 @@ public class RectangularMap implements WorldMap{
 
     @Override
     public boolean canMoveTo(Vector2d position) {
-        if(position.getX()>=width || position.getY()>=height
+        if(position.getX()>width || position.getY()>height
                 || position.getX()<0 || position.getY()<0)
         {
             return false;

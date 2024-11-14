@@ -34,8 +34,8 @@ class RectangularMapTest {
         assertTrue(map.canMoveTo(new Vector2d(0,1)));
         assertFalse(map.canMoveTo(new Vector2d(0,-1)));
         assertFalse( map.canMoveTo(new Vector2d(-1,0)));
-        assertFalse( map.canMoveTo(new Vector2d(5,0)));
-        assertFalse( map.canMoveTo(new Vector2d(0,5)));
+        assertFalse( map.canMoveTo(new Vector2d(6,0)));
+        assertFalse( map.canMoveTo(new Vector2d(0,6)));
     }
 
     @Test

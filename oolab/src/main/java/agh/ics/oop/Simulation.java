@@ -14,6 +14,7 @@ public class Simulation {
         this.map = map;
         for (Vector2d position : positions) {
             this.animals.add(new Animal(position));
+            map.place(animals.getLast());
         }
         this.moves = moves;
     }

@@ -1,0 +1,15 @@
+package agh.ics.oop.model;
+
+public class Grass {
+    private final Vector2d location;
+    public Grass(Vector2d position) {
+        this.location = position;
+    }
+    public Vector2d geLocation() {
+        return location;
+    }
+
+    public String toString() {
+        return "*";
+    }
+}
