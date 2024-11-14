@@ -15,17 +15,21 @@ public class Animal {
     }
 
     public String toString(){
-        return location.toString() + orient.toString();
+        return orient.toString();
     }
     public MapDirection getOrient() {
         return orient;
+    }
+
+    public Vector2d getLocation() {
+        return location;
     }
 
     public boolean isAt(Vector2d position){
         return location.equals(position);
     }
 
-    public void move(MoveDirection direction){
+    public void move(MoveDirection direction, MoveValidator validator){
     orient = switch (direction){
         case RIGHT -> orient.next();
         case LEFT -> orient.previous();
@@ -43,12 +47,15 @@ public class Animal {
         case BACKWARD -> switch (orient){ //nie sprawdza czy nie wychodzi poza zakres
             case NORTH -> location.add(new Vector2d(0,-1));
             case SOUTH -> location.add(new Vector2d(0,1));
-            case WEST -> location.add(new Vector2d(-1,0));
-            case EAST -> location.add(new Vector2d(1,0));
+            case WEST -> location.add(new Vector2d(1,0));
+            case EAST -> location.add(new Vector2d(-1,0));
         };
     };
-    if (newLocation.getX() >= 0 && newLocation.getX() <= 4 && newLocation.getY() >= 0 && newLocation.getY() <= 4)
-            location = newLocation;
+//    if (newLocation.getX() >= 0 && newLocation.getX() <= 4 && newLocation.getY() >= 0 && newLocation.getY() <= 4)
+//            location = newLocation;
+        if (validator.canMoveTo(newLocation)){
+            this.location = newLocation;
+        }
     }
     @Override
     public boolean equals(Object o) {
