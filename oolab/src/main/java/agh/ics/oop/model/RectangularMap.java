@@ -5,8 +5,8 @@ import agh.ics.oop.model.util.MapVisualizer;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RectangularMap implements WorldMap{
-    private Map<Vector2d, Animal> animals = new HashMap<>();
+public class RectangularMap extends AbstractWorldMap{
+//    private Map<Vector2d, Animal> animals = new HashMap<>();
     private final int width;
     private final int height;
     public  RectangularMap(int width, int height){
@@ -30,32 +30,32 @@ public class RectangularMap implements WorldMap{
     }
 
 
-    @Override
-    public boolean place(Animal animal) {
-        if (canMoveTo(animal.getLocation())) {
-            animals.put(animal.getLocation(), animal);
-            return true;
-        }
-        return false;
-    }
+//    @Override
+//    public boolean place(Animal animal) {
+//        if (canMoveTo(animal.getLocation())) {
+//            animals.put(animal.getLocation(), animal);
+//            return true;
+//        }
+//        return false;
+//    }
 
-    @Override
-    public void move(Animal animal, MoveDirection direction) {
-        Vector2d oldPosition = animal.getLocation();
-        animal.move(direction, this);
-        animals.remove(oldPosition);
-        animals.put(animal.getLocation(), animal);
-    }
+//    @Override
+//    public void move(Animal animal, MoveDirection direction) {
+//        Vector2d oldPosition = animal.getLocation();
+//        animal.move(direction, this);
+//        animals.remove(oldPosition);
+//        animals.put(animal.getLocation(), animal);
+//    }
 
-    @Override
-    public boolean isOccupied(Vector2d position) {
-        return objectAt(position) != null;
-    }
+//    @Override
+//    public boolean isOccupied(Vector2d position) {
+//        return objectAt(position) != null;
+//    }
 
-    @Override
-    public Animal objectAt(Vector2d position) {
-        return animals.get(position);
-    }
+//    @Override
+//    public WorldElement objectAt(Vector2d position) {
+//        return animals.get(position);
+//    }
 
     @Override
     public boolean canMoveTo(Vector2d position) {

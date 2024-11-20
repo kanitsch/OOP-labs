@@ -1,11 +1,11 @@
 package agh.ics.oop.model;
 
-public class Grass {
+public class Grass implements WorldElement{
     private final Vector2d location;
     public Grass(Vector2d position) {
         this.location = position;
     }
-    public Vector2d geLocation() {
+    public Vector2d getLocation() {
         return location;
     }
 

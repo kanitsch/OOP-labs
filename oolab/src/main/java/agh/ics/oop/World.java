@@ -51,6 +51,12 @@ public class World {
         List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
         Simulation simulation = new Simulation(positions, directions1,map);
         simulation.run();
+
+        WorldMap map2 = new GrassField(10);
+        System.out.println(map2);
+        Simulation simulation2 = new Simulation(positions, directions1,map2);
+        simulation2.run();
+
     }
 
 }
