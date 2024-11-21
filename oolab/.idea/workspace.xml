@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74d7f2c2-952a-47e5-b1be-f49e49dd3269" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/PositionIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/GrassField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/PositionIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/PositionIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,61 +65,61 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.AnimalTest.animalEquals.executor": "Run",
-    "Gradle.AnimalTest.animalHashCode.executor": "Run",
-    "Gradle.AnimalTest.animalMove.executor": "Run",
-    "Gradle.AnimalTest.animalOutOfMap.executor": "Run",
-    "Gradle.AnimalTest.animalToString.executor": "Run",
-    "Gradle.AnimalTest.animalTurn.executor": "Run",
-    "Gradle.AnimalTest.createAnimal.executor": "Run",
-    "Gradle.AnimalTest.executor": "Coverage",
-    "Gradle.AnimalTest.move.executor": "Run",
-    "Gradle.AnimalTest.orientTest.executor": "Run",
-    "Gradle.GrassFieldTest.animalAt.executor": "Run",
-    "Gradle.GrassFieldTest.executor": "Run",
-    "Gradle.GrassFieldTest.isOccupied.executor": "Run",
-    "Gradle.GrassFieldTest.moveAnimals.executor": "Run",
-    "Gradle.GrassFieldTest.testIfMapWorks.executor": "Run",
-    "Gradle.MapDirectionTest.executor": "Coverage",
-    "Gradle.OptionsParserTest.ciagPusty.executor": "Run",
-    "Gradle.OptionsParserTest.emptyArgs.executor": "Run",
-    "Gradle.OptionsParserTest.executor": "Coverage",
-    "Gradle.RectangularMapTest.canMove.executor": "Run",
-    "Gradle.RectangularMapTest.canMoveTo.executor": "Run",
-    "Gradle.RectangularMapTest.executor": "Run",
-    "Gradle.RectangularMapTest.getPlacedAnimals.executor": "Run",
-    "Gradle.RectangularMapTest.getters.executor": "Run",
-    "Gradle.RectangularMapTest.getters2.executor": "Run",
-    "Gradle.RectangularMapTest.moveAnimalOnMap.executor": "Run",
-    "Gradle.RectangularMapTest.placeAnimalOnMap.executor": "Run",
-    "Gradle.RectangularMapTest.testToString.executor": "Run",
-    "Gradle.SimulationTest.animalPosition.executor": "Run",
-    "Gradle.SimulationTest.dataInterpretationTest1.executor": "Run",
-    "Gradle.SimulationTest.dataInterpretationTest2.executor": "Run",
-    "Gradle.SimulationTest.emptyString.executor": "Run",
-    "Gradle.SimulationTest.executor": "Coverage",
-    "Gradle.SimulationTest.moreAnimals.executor": "Run",
-    "Gradle.SimulationTest.testAnimalMovement.executor": "Run",
-    "Gradle.SimulationTest.testAnimalStaysWithinBounds.executor": "Run",
-    "Gradle.Tests in 'oolab.test'.executor": "Coverage",
-    "Gradle.Vector2dTest.executor": "Coverage",
-    "Gradle.oolab [:agh.ics.oop.World.main()].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "lab5-bonus",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.AnimalTest.animalEquals.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AnimalTest.animalHashCode.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AnimalTest.animalMove.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AnimalTest.animalOutOfMap.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AnimalTest.animalToString.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AnimalTest.animalTurn.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AnimalTest.createAnimal.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AnimalTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.AnimalTest.move.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AnimalTest.orientTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrassFieldTest.animalAt.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrassFieldTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrassFieldTest.isOccupied.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrassFieldTest.moveAnimals.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrassFieldTest.testIfMapWorks.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MapDirectionTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.OptionsParserTest.ciagPusty.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OptionsParserTest.emptyArgs.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OptionsParserTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.RectangularMapTest.canMove.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RectangularMapTest.canMoveTo.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RectangularMapTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RectangularMapTest.getPlacedAnimals.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RectangularMapTest.getters.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RectangularMapTest.getters2.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RectangularMapTest.moveAnimalOnMap.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RectangularMapTest.placeAnimalOnMap.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RectangularMapTest.testToString.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimulationTest.animalPosition.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimulationTest.dataInterpretationTest1.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimulationTest.dataInterpretationTest2.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimulationTest.emptyString.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimulationTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.SimulationTest.moreAnimals.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimulationTest.testAnimalMovement.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimulationTest.testAnimalStaysWithinBounds.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'oolab.test'.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.Vector2dTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.oolab [:agh.ics.oop.World.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab5-bonus&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -249,8 +248,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.World" />
         <item itemvalue="Gradle.GrassFieldTest" />
+        <item itemvalue="Application.World" />
         <item itemvalue="Gradle.RectangularMapTest" />
         <item itemvalue="Gradle.GrassFieldTest.animalAt" />
         <item itemvalue="Gradle.GrassFieldTest.isOccupied" />
@@ -286,6 +285,8 @@
       <workItem from="1732055507840" duration="6921000" />
       <workItem from="1732133420389" duration="6332000" />
       <workItem from="1732141741167" duration="2672000" />
+      <workItem from="1732144477478" duration="26000" />
+      <workItem from="1732144846639" duration="2348000" />
     </task>
     <servers />
   </component>
