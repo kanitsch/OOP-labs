@@ -13,8 +13,14 @@ public class Simulation {
         this.animals = new ArrayList<>();
         this.map = map;
         for (Vector2d position : positions) {
-            this.animals.add(new Animal(position));
-            map.place(animals.getLast());
+
+            try {
+                Animal animal1=new Animal(position);
+                map.place(animal1);
+                this.animals.add(animal1);
+            } catch (IncorrectPositionException e) {
+                System.out.println(e.getMessage());
+            }
         }
         this.moves = moves;
     }
@@ -28,7 +34,7 @@ public class Simulation {
             Animal animal = animals.get(i%numberOfAnimals);
             MoveDirection move = moves.get(i);
             map.move(animal, move);
-            System.out.println(map);
+//            System.out.println(map);
         }
     }
 

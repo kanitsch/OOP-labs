@@ -25,38 +25,53 @@ public class World {
 
     public static void main(String[] args) {
         System.out.println("system wystartowal");
-        List<MoveDirection> directions = OptionsParser.dirs(args);
+        try {
+            List<MoveDirection> directions = OptionsParser.dirs(args);
 
-        run(directions);
-        System.out.println("system zakonczyl dzialanie");
+            run(directions);
 
-        Vector2d position1 = new Vector2d(1,2);
-        System.out.println(position1);
-        Vector2d position2 = new Vector2d(-2,1);
-        System.out.println(position2);
-        System.out.println(position1.add(position2));
 
-        MapDirection direction=MapDirection.EAST;
-        System.out.println(direction.toString());
-        System.out.println(direction.next());
-        System.out.println(direction.previous());
-        System.out.println(direction.toUnitVector());
+            Vector2d position1 = new Vector2d(1,2);
+            System.out.println(position1);
+            Vector2d position2 = new Vector2d(-2,1);
+            System.out.println(position2);
+            System.out.println(position1.add(position2));
+
+            MapDirection direction=MapDirection.EAST;
+            System.out.println(direction.toString());
+            System.out.println(direction.next());
+            System.out.println(direction.previous());
+            System.out.println(direction.toUnitVector());
+
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+            return;
+        }
+
 
         Animal pet=new Animal();
         System.out.println(pet.toString());
 
         System.out.println(pet.toString());
         WorldMap map = new RectangularMap(5,5);
-        List<MoveDirection> directions1 = OptionsParser.dirs(args);
-        List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
-        Simulation simulation = new Simulation(positions, directions1,map);
-        simulation.run();
+        try {
+            List<MoveDirection> directions1 = OptionsParser.dirs(args);
+            List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
+            Simulation simulation = new Simulation(positions, directions1,map);
+            simulation.run();
 
-        WorldMap map2 = new GrassField(10);
-        System.out.println(map2);
-        Simulation simulation2 = new Simulation(positions, directions1,map2);
-        simulation2.run();
+            GrassField map2 = new GrassField(10);
 
+            map2.addObserver(new ConsoleMapDisplay());
+
+            Simulation simulation2 = new Simulation(positions, directions1,map2);
+            simulation2.run();
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+            return;
+        }
+
+        System.out.println("system zakonczyl dzialanie");
     }
 
 }

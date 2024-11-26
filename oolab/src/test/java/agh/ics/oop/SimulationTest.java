@@ -118,8 +118,8 @@ class SimulationTest {
         simulation.run();
 
         List<Animal> animals = simulation.getAnimals();
-        assertTrue(animals.get(0).isAt(new Vector2d(0, 4)));
-        assertTrue(animals.get(1).isAt(new Vector2d(4, 4)));
+        assertTrue(animals.get(0).isAt(new Vector2d(0, 5)));
+        assertTrue(animals.get(1).isAt(new Vector2d(4, 5)));
     }
 
 
