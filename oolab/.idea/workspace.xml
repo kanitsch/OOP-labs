@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74d7f2c2-952a-47e5-b1be-f49e49dd3269" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/model/RectangularMapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RectangularMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/WorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/WorldMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/PositionIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/PositionIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/model/RandomPositionGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +47,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,13 +77,18 @@
     &quot;Gradle.AnimalTest.executor&quot;: &quot;Coverage&quot;,
     &quot;Gradle.AnimalTest.move.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AnimalTest.orientTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrassFieldTest.animalAt.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrassFieldTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrassFieldTest.isOccupied.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrassFieldTest.moveAnimals.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrassFieldTest.testIfMapWorks.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.MapDirectionTest.executor&quot;: &quot;Coverage&quot;,
     &quot;Gradle.OptionsParserTest.ciagPusty.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.OptionsParserTest.emptyArgs.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.OptionsParserTest.executor&quot;: &quot;Coverage&quot;,
     &quot;Gradle.RectangularMapTest.canMove.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.RectangularMapTest.canMoveTo.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RectangularMapTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.RectangularMapTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.RectangularMapTest.getPlacedAnimals.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.RectangularMapTest.getters.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.RectangularMapTest.getters2.executor&quot;: &quot;Run&quot;,
@@ -104,7 +109,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lab4&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab5-bonus&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -138,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnimalTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GrassFieldTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -151,7 +156,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.AnimalTest&quot;" />
+            <option value="&quot;agh.ics.oop.model.GrassFieldTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -162,7 +167,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MapDirectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GrassFieldTest.animalAt" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -175,7 +180,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.MapDirectionTest&quot;" />
+            <option value="&quot;agh.ics.oop.model.GrassFieldTest.animalAt&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -186,7 +191,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SimulationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GrassFieldTest.isOccupied" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -199,7 +204,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.SimulationTest&quot;" />
+            <option value="&quot;agh.ics.oop.model.GrassFieldTest.isOccupied&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -210,7 +215,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Vector2dTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RectangularMapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -223,7 +228,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.model.Vector2dTest&quot;" />
+            <option value="&quot;agh.ics.oop.model.RectangularMapTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -236,18 +241,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.World" />
-      <item itemvalue="Gradle.AnimalTest" />
-      <item itemvalue="Gradle.MapDirectionTest" />
-      <item itemvalue="Gradle.SimulationTest" />
-      <item itemvalue="Gradle.Vector2dTest" />
+      <item itemvalue="Gradle.GrassFieldTest.animalAt" />
+      <item itemvalue="Gradle.GrassFieldTest.isOccupied" />
+      <item itemvalue="Gradle.GrassFieldTest" />
+      <item itemvalue="Gradle.RectangularMapTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GrassFieldTest" />
         <item itemvalue="Application.World" />
-        <item itemvalue="Gradle.AnimalTest" />
-        <item itemvalue="Gradle.MapDirectionTest" />
-        <item itemvalue="Gradle.Vector2dTest" />
-        <item itemvalue="Gradle.SimulationTest" />
+        <item itemvalue="Gradle.RectangularMapTest" />
+        <item itemvalue="Gradle.GrassFieldTest.animalAt" />
+        <item itemvalue="Gradle.GrassFieldTest.isOccupied" />
       </list>
     </recent_temporary>
   </component>
@@ -277,6 +282,11 @@
       <workItem from="1731002337295" duration="623000" />
       <workItem from="1731176890756" duration="12474000" />
       <workItem from="1731240192708" duration="5493000" />
+      <workItem from="1732055507840" duration="6921000" />
+      <workItem from="1732133420389" duration="6332000" />
+      <workItem from="1732141741167" duration="2672000" />
+      <workItem from="1732144477478" duration="26000" />
+      <workItem from="1732144846639" duration="2348000" />
     </task>
     <servers />
   </component>
@@ -287,9 +297,10 @@
     <SUITE FILE_PATH="coverage/oolab$Tests_in__oolab_test_.ic" NAME="Tests in 'oolab.test' Coverage Results" MODIFIED="1730885079295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/oolab$Vector2dTest.ic" NAME="Vector2dTest Coverage Results" MODIFIED="1731246243173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/oolab$MapDirectionTest.ic" NAME="MapDirectionTest Coverage Results" MODIFIED="1731246261275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/oolab$RectangularMapTest.ic" NAME="RectangularMapTest Coverage Results" MODIFIED="1731246114555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/oolab$OptionsParserTest.ic" NAME="OptionsParserTest Coverage Results" MODIFIED="1731246189893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/oolab$RectangularMapTest.ic" NAME="RectangularMapTest Coverage Results" MODIFIED="1732139675644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/oolab$AnimalTest.ic" NAME="AnimalTest Coverage Results" MODIFIED="1731246270985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/oolab$SimulationTest.ic" NAME="SimulationTest Coverage Results" MODIFIED="1731246212557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/oolab$GrassFieldTest.ic" NAME="GrassFieldTest Coverage Results" MODIFIED="1732139717529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

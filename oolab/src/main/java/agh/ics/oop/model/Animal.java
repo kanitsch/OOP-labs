@@ -2,7 +2,7 @@ package agh.ics.oop.model;
 
 import java.util.Objects;
 
-public class Animal {
+public class Animal implements WorldElement{
     private MapDirection orient=MapDirection.NORTH;
     private Vector2d location;
 
