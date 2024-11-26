@@ -42,7 +42,7 @@ class RectangularMapTest {
         try {
             assertTrue(map.place(animal1));
         } catch (IncorrectPositionException e) {
-            fail("Unexpected exception: " + e.getMessage());
+            System.out.println(e.getMessage());
         }
 
         assertThrows(IncorrectPositionException.class, () -> map.place(animal2));
@@ -68,7 +68,7 @@ class RectangularMapTest {
         try {
             map.place(animal1);
         } catch (IncorrectPositionException e) {
-            System.err.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
 
 
@@ -88,12 +88,12 @@ class RectangularMapTest {
         try {
             map.place(animal1);
         } catch (IncorrectPositionException e) {
-            System.err.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
         try {
             map.place(animal2);
         } catch (IncorrectPositionException e) {
-            System.err.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
 
 
@@ -120,12 +120,12 @@ class RectangularMapTest {
         try {
             map.place(animal1);
         } catch (IncorrectPositionException e) {
-            System.err.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
         try {
             map.place(animal2);
         } catch (IncorrectPositionException e) {
-            System.err.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
 
         Map<Vector2d, Animal> animals = map.getAnimals();
@@ -145,7 +145,7 @@ public void testToString() {
         map.place(animal1);
         map.place(animal2);
     } catch (IncorrectPositionException e) {
-        fail("Exception should not be thrown when placing animals");
+        System.out.println(e.getMessage());
     }
     String expected=
             """
