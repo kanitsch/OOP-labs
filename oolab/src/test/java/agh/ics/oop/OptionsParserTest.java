@@ -11,7 +11,7 @@ import java.util.List;
 class OptionsParserTest {
     @Test
     public void dirsTest(){
-        String[] args= {"f", "f", "g", "b", "l", "r", "fg"};
+        String[] args= {"f", "f", "b", "l", "r"};
         List<MoveDirection> solved = Arrays.asList(
                 MoveDirection.FORWARD,
                 MoveDirection.FORWARD,
@@ -19,15 +19,22 @@ class OptionsParserTest {
                 MoveDirection.LEFT,
                 MoveDirection.RIGHT
         );
-        assertEquals(solved, OptionsParser.dirs(args));
+
+        assertEquals(solved,OptionsParser.dirs(args));
 
     }
+
+
     @Test
     public void emptyArgs(){
         String[] args= {};
         List<MoveDirection> solved= new ArrayList<>();
         assertEquals(solved, OptionsParser.dirs(args));
     }
-
+    @Test
+    public void throwsExceptionTest(){
+        String[] args= {"o"};
+        assertThrows(IllegalArgumentException.class, () -> OptionsParser.dirs(args));
+    }
 
 }

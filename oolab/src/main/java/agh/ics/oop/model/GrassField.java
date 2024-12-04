@@ -29,27 +29,6 @@ public class GrassField extends AbstractWorldMap {
 
     }
 
-//    @Override
-//    public boolean place(Animal animal) {
-//        if (canMoveTo(animal.getLocation())) {
-//            animals.put(animal.getLocation(), animal);
-//            return true;
-//        }
-//        return false;
-//    }
-
-//    @Override
-//    public void move(Animal animal, MoveDirection direction) {
-//        Vector2d oldPosition = animal.getLocation();
-//        animal.move(direction, this);
-//        animals.remove(oldPosition);
-//        animals.put(animal.getLocation(), animal);
-//    }
-
-//    @Override
-//    public boolean isOccupied(Vector2d position) {
-//        return animals.containsKey(position) || grass.containsKey(position);
-//    }
 
     @Override
     public WorldElement objectAt(Vector2d position) {
@@ -61,17 +40,12 @@ public class GrassField extends AbstractWorldMap {
     }
 
 //    @Override
-//    public boolean canMoveTo(Vector2d position) {
-//        return !animals.containsKey(position);
+//    public String toString() {
+//        MapVisualizer mapVisualizer = new MapVisualizer(this);
+//        Vector2d lowerLeft = lowerLeft();
+//        Vector2d upperRight = upperRight();
+//        return mapVisualizer.draw(lowerLeft, upperRight);
 //    }
-
-    @Override
-    public String toString() {
-        MapVisualizer mapVisualizer = new MapVisualizer(this);
-        Vector2d lowerLeft = lowerLeft();
-        Vector2d upperRight = upperRight();
-        return mapVisualizer.draw(lowerLeft, upperRight);
-    }
 
     private Vector2d upperRight() {
         if (grass.isEmpty() && animals.isEmpty()) {
@@ -121,5 +95,10 @@ public class GrassField extends AbstractWorldMap {
         List<WorldElement> elements=super.getElements();
         elements.addAll(grass.values());
         return elements;
+    }
+
+    @Override
+    public Boundary getCurrentBounds() {
+        return new Boundary(lowerLeft(), upperRight());
     }
 }

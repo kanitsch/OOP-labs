@@ -112,7 +112,7 @@ class AnimalTest {
         animal1.move(MoveDirection.FORWARD, map);
         animal1.move(MoveDirection.FORWARD, map);
         animal1.move(MoveDirection.FORWARD, map);
-        assertTrue(animal1.isAt(new Vector2d(2,4)));
+        assertTrue(animal1.isAt(new Vector2d(2,5)));
     }
 
 

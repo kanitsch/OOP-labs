@@ -8,7 +8,12 @@ public class GrassFieldTest {
     public void placeAnimalOnMap(){
         WorldMap map = new GrassField(10);
         Animal animal = new Animal();
-        map.place(animal);
+        try {
+            map.place(animal);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
         assertEquals(new Vector2d(2, 2), animal.getLocation());
     }
 
@@ -16,7 +21,11 @@ public class GrassFieldTest {
     public void moveAnimal(){
         WorldMap map = new GrassField(10);
         Animal animal = new Animal();
-        map.place(animal);
+        try {
+            map.place(animal);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         map.move(animal,MoveDirection.FORWARD);
         assertEquals(new Vector2d(2, 3), animal.getLocation());
     }
@@ -25,21 +34,30 @@ public class GrassFieldTest {
     public void canMoveTo1(){
         WorldMap map = new GrassField(10);
         Animal animal1 = new Animal();
-        map.place(animal1);
+        try {
+            map.place(animal1);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         assertTrue(map.canMoveTo(new Vector2d(2, 3)));
         assertFalse(map.canMoveTo(new Vector2d(2, 2)));
     }
 
-
     @Test
-    public void placeAnimals2(){
+    public void placeException(){
         WorldMap map = new GrassField(10);
         Animal animal1 = new Animal();
         Animal animal2 = new Animal();
-        animal2.move(MoveDirection.LEFT,map);
-        assertTrue(map.place(animal1));
-        assertFalse(map.place(animal2));
+        try {
+            map.place(animal1);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        assertThrows(IncorrectPositionException.class, () -> map.place(animal2));
+
     }
+
+
 
     @Test
     public void moveAnimalsMore(){
@@ -49,9 +67,14 @@ public class GrassFieldTest {
         Animal animal3 = new Animal(new Vector2d(3, 10));
         animal2.move(MoveDirection.LEFT,map);
         animal2.move(MoveDirection.LEFT,map);
-        map.place(animal1);
-        map.place(animal2);
-        map.place(animal3);
+        try {
+            map.place(animal1);
+            map.place(animal2);
+            map.place(animal3);
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
+
         map.move(animal1, MoveDirection.FORWARD);
         map.move(animal2, MoveDirection.FORWARD);
         map.move(animal3, MoveDirection.FORWARD);
@@ -66,8 +89,13 @@ public class GrassFieldTest {
         Animal animal1 = new Animal();
         Animal animal2 = new Animal();
         animal2.move(MoveDirection.LEFT,map);
-        map.place(animal1);
-        map.place(animal2);
+        try {
+            map.place(animal1);
+            map.place(animal2);
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
+
         assertTrue(map.isOccupied(new Vector2d(2, 2)));
         assertFalse(map.isOccupied(new Vector2d(2, 10)));
     }
@@ -77,8 +105,13 @@ public class GrassFieldTest {
         WorldMap map = new GrassField(10);
         Animal animal1 = new Animal();
         Animal animal2 = new Animal();
-        map.place(animal1);
-        map.place(animal2);
+        try {
+            map.place(animal1);
+            map.place(animal2);
+        } catch (IncorrectPositionException e) {
+            System.out.println(e.getMessage());
+        }
+
         assertEquals(animal1, map.objectAt(new Vector2d(2, 2)));
         assertEquals(animal1, map.objectAt(new Vector2d(2, 2)));
     }
