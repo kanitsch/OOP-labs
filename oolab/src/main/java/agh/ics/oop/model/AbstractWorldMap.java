@@ -7,7 +7,11 @@ import java.util.*;
 public abstract class AbstractWorldMap implements WorldMap {
     protected Map<Vector2d,Animal> animals = new HashMap<>();
     private final List<MapChangeListener> observers = new ArrayList<>();
+    private final UUID id;
 
+    protected AbstractWorldMap() {
+        this.id = UUID.randomUUID();
+    }
 
     @Override
     public boolean place(Animal animal) throws IncorrectPositionException {
@@ -60,6 +64,11 @@ public abstract class AbstractWorldMap implements WorldMap {
         return map.draw(bounds.lowerLeft(), bounds.upperRight());
     }
     public abstract Boundary getCurrentBounds();
+
+    @Override
+    public UUID getId() {
+        return id;
+    }
 
     public void addObserver(MapChangeListener observer) {
         if (!observers.contains(observer)) {

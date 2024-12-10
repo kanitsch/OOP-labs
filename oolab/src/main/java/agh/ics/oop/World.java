@@ -3,6 +3,7 @@ package agh.ics.oop;
 import agh.ics.oop.model.*;
 import agh.ics.oop.model.MapDirection;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class World {
@@ -53,23 +54,32 @@ public class World {
         System.out.println(pet.toString());
 
         System.out.println(pet.toString());
-        WorldMap map = new RectangularMap(5,5);
+        List<Simulation> simulations = new ArrayList<>();
+        ConsoleMapDisplay observer=new ConsoleMapDisplay();
         try {
-            List<MoveDirection> directions1 = OptionsParser.dirs(args);
-            List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
-            Simulation simulation = new Simulation(positions, directions1,map);
-            simulation.run();
+        List<MoveDirection> directions1 = OptionsParser.dirs(args);
+        List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
+        for (int i = 0; i < 1000; i++) {
+            AbstractWorldMap map;
+            if (i % 2 == 0) {
+                map = new RectangularMap(10,10);
+            } else {
+                map = new GrassField(10);
+            }
+            map.addObserver(observer);
+            Simulation simulation = new Simulation(positions,directions1,map);
+            simulations.add(simulation);
+        }
 
-            GrassField map2 = new GrassField(10);
+            SimulationEngine engine = new SimulationEngine(simulations);
+            engine.runAsyncInThreadPool();
+            engine.awaitSimulationsEnd();
 
-            map2.addObserver(new ConsoleMapDisplay());
-
-            Simulation simulation2 = new Simulation(positions, directions1,map2);
-            simulation2.run();
         } catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
             return;
         }
+
 
         System.out.println("system zakonczyl dzialanie");
     }
