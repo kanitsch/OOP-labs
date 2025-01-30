@@ -20,6 +20,7 @@ public class Simulation implements Runnable {
                 this.animals.add(animal1);
             } catch (IncorrectPositionException e) {
                 System.out.println(e.getMessage());
+
             }
         }
         this.moves = moves;
@@ -31,10 +32,20 @@ public class Simulation implements Runnable {
 
         System.out.println(map);
         int numberOfAnimals = animals.size();
+        try{
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
         for (int i = 0; i < moves.size(); i++) {
             Animal animal = animals.get(i%numberOfAnimals);
             MoveDirection move = moves.get(i);
             map.move(animal, move);
+            try{
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println(e.getMessage());
+            }
 //            System.out.println(map);
         }
     }
